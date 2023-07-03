@@ -1,0 +1,86 @@
+{% extends 'temp.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container py-5 h-200">
+    <div class="row d-flex justify-content-center align-items-center">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-4">
+                    <h3 class="fw-bold mb-4">Image List</h3>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item bg-dark text-white mt-3 mb-3">
+                            <img src="{%  static 'example.jpg' %}" alt="Image" class="rounded" style="width: 50px; height: 50px;">
+                            <span class="ms-2">IMAGE 1 </span>
+                        </li>
+                        <li class="list-group-item bg-dark text-white mt-3 mb-3">
+                            <img src="{%  static 'example.jpg' %}" alt="Image" class="rounded" style="width: 50px; height: 50px;">
+                            <span class="ms-2">IMAGE 2 </span>
+                        </li>
+                        <li class="list-group-item bg-dark text-white mt-3 mb-3">
+                            <img src="{%  static 'example.jpg' %}" alt="Image" class="rounded" style="width: 50px; height: 50px;">
+                            <span class="ms-2">IMAGE 3 </span>
+                        </li>
+
+
+                    </ul>
+
+<!--                    <p class="text-muted">No images in the list.</p>-->
+
+                </div>
+
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-4 mt-4 justify-content-center align-items-center" style="border-radius: 1rem;">
+                        <div class="card-body p-4 m-3">
+                            <h3 class="fw-bold mb-4">Image 1</h3>
+                            <img src="{% static 'example.jpg' %}" class="img-fluid" alt="No image" style="width: 600px; height: 600px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white mt-3 mb-3">
+                            <span class="mx-2">BI-RADS 0 </span>
+                            <div class="form-check form-switch float-end">
+                                <input class="form-check-input" type="radio" name="image_radio" id="image1" value="image1">
+                                <label class="form-check-label" for="image1"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-dark text-white mt-3 mb-3">
+                            <span class="mx-2">BI-RADS 1</span>
+                            <div class="form-check form-switch float-end">
+                                <input class="form-check-input" type="radio" name="image_radio" id="image2" value="image2">
+                                <label class="form-check-label" for="image2"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-dark text-white mt-3 mb-3">
+                            <span class="mx-2">BI-RADS 2</span>
+                            <div class="form-check form-switch float-end">
+                                <input class="form-check-input" type="radio" name="image_radio" id="image3" value="image3">
+                                <label class="form-check-label" for="image3"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-dark text-white mt-3 mb-3">
+                            <div class="input-group bg-dark text-white">
+                                <span class="input-group-text">Comments</span>
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+</div>
+
+</div>
+
+
+{% endblock content %}
